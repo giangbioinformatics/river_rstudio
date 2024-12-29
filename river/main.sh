@@ -5,7 +5,7 @@ fi
 
 # overwrite config
 cp ./analysis/river/rserver.conf ./rserver.conf
-echo "www-port=$PORT" >> ./rserver.conf
+echo -e "\nwww-port=$PORT" >> ./rserver.conf
 
 
 # run jupyter lab
