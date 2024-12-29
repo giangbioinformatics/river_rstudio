@@ -4,7 +4,9 @@ if [ ! -f ~/.river/images/singularities/images/rstudio_latest.sif ]; then
 fi
 
 # overwrite config
-echo "www-port=$PORT" >> ./analysis/river/rserver.conf
+cp ./analysis/river/rserver.conf ./rserver.conf
+echo "www-port=$PORT" >> ./rserver.conf
+
 
 # run jupyter lab
-singularity run --writable --cleanenv --env DISABLE_AUTH=true -B ./analysis/river/rserver.conf:/etc/rstudio/disable_auth_rserver.conf  <<river_home>>/.river/images/singularities/images/rstudio_latest.sif
+singularity run --writable --cleanenv --env DISABLE_AUTH=true -B ./rserver.conf:/etc/rstudio/disable_auth_rserver.conf  <<river_home>>/.river/images/singularities/images/rstudio_latest.sif
