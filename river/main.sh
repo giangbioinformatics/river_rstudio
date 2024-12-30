@@ -9,4 +9,4 @@ echo -e "\nwww-port=$PORT" >> ./rserver.conf
 
 
 # run jupyter lab
-singularity run --writable --cleanenv --env DISABLE_AUTH=true -B ./rserver.conf:/etc/rstudio/disable_auth_rserver.conf  <<river_home>>/.river/images/singularities/images/rstudio_latest.sif
+singularity run --fakeroot --writable --cleanenv --env DISABLE_AUTH=true -B ./rserver.conf:/etc/rstudio/disable_auth_rserver.conf  <<river_home>>/.river/images/singularities/images/rstudio_latest.sif
