@@ -37,7 +37,7 @@ if [ ! -f $db ]; then
     cp ./analysis/river/database.conf $db
 fi
 
-singularity run \
+script -q -c "singularity run \
 	--bind $RSTUDIO_TMP/run:/run \
 	--bind $RSTUDIO_TMP/var-lib-rstudio-server:/var/lib/rstudio-server \
 	--bind /sys/fs/cgroup/:/sys/fs/cgroup/:ro \
@@ -54,4 +54,4 @@ singularity run \
 		--rsession-which-r=$RSTUDIO_WHICH_R \
 		--rsession-ld-library-path=$CONDA_PREFIX/lib \
         --auth-none=1 \
-        --server-user $USER
+        --server-user $USER" /dev/null
