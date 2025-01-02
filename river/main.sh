@@ -49,7 +49,7 @@ script -q -c "singularity run \
 	--env RETICULATE_PYTHON=$PY_BIN \
 	$CONTAINER \
 	rserver \
-		--www-address=127.0.0.1 \
+		--www-address=0.0.0.0 \
 		--www-port=$PORT \
 		--rsession-which-r=$RSTUDIO_WHICH_R \
 		--rsession-ld-library-path=$CONDA_PREFIX/lib \
