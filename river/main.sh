@@ -51,7 +51,7 @@ script -q -c "singularity run \
 	rserver \
 		--www-address=0.0.0.0 \
 		--www-port=$PORT \
-		--rsession-which-r=$RSTUDIO_WHICH_R \
+		--rsession-which-r=$R_BIN \
 		--rsession-ld-library-path=$CONDA_PREFIX/lib \
         --auth-none=1 \
         --server-user $USER" /dev/null

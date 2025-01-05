@@ -1,0 +1,1 @@
+echo <<uuid_job_id>>/ > <<river_home>>/.river/jobs/<<uuid_job_id>>/job.proxy_location
