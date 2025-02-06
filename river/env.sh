@@ -1,1 +1,0 @@
-ALLOW_ACCESS=true
